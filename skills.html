@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skills and Certifications of Affan Baig">
+  <title>Skills & Certs | Affan Baig</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+    
+    .skill-category {
+      background-color: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color);
+    }
+    
+    .skill-category::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(400px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(6, 182, 212, 0.1), transparent 40%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .skill-category:hover::before {
+      opacity: 1;
+    }
+
+    .skill-category > * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .skill-category h3 {
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .skill-item {
+      display: flex;
+      align-items: center;
+      color: var(--text-secondary);
+    }
+    
+    .skill-item::before {
+      content: '>';
+      color: var(--accent-color);
+      font-family: var(--font-mono);
+      margin-right: 0.75rem;
+      font-weight: bold;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+
+    .cert-card {
+      display: flex;
+      align-items: center;
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: var(--transition);
+      gap: 1.5rem;
+    }
+
+    .cert-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
+    .cert-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .cert-info {
+      flex: 1;
+    }
+
+    .cert-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+
+    .cert-issuer {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-link {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <nav>
+        <div class="logo">Affan<span>.</span>Baig</div>
+        <div class="nav-links">
+          <a href="index.html">/home</a>
+          <a href="about.html">/about</a>
+          <a href="projects.html">/projects</a>
+          <a href="skills.html" class="active">/skills</a>
+          <a href="contact.html">/contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Technical Arsenal</h1>
+
+    <div class="skills-grid">
+      
+      <div class="skill-category">
+        <h3>[01] Networking & Security</h3>
+        <div class="skill-list">
+          <div class="skill-item">Network Architecture (LAN/WAN)</div>
+          <div class="skill-item">OSPF, EIGRP, BGP Routing</div>
+          <div class="skill-item">Access Control Lists (ACLs)</div>
+          <div class="skill-item">VLANs & Subnetting</div>
+          <div class="skill-item">Penetration Testing Basics</div>
+          <div class="skill-item">Cryptography & Encryption</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>[02] Programming</h3>
+        <div class="skill-list">
+          <div class="skill-item">Python</div>
+          <div class="skill-item">C++</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">Bash/Shell Scripting</div>
+          <div class="skill-item">SQL</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>[03] Frameworks / Tools</h3>
+        <div class="skill-list">
+          <div class="skill-item">FastAPI</div>
+          <div class="skill-item">React / React Native</div>
+          <div class="skill-item">Cisco Packet Tracer</div>
+          <div class="skill-item">Wireshark</div>
+          <div class="skill-item">Linux (Kali, Ubuntu)</div>
+          <div class="skill-item">Git / GitHub</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>[04] Industrial Systems</h3>
+        <div class="skill-list">
+          <div class="skill-item">SP5</div>
+          <div class="skill-item">CIM</div>
+          <div class="skill-item">XDF</div>
+          <div class="skill-item">ICS Security Fundamentals</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title mt-4" style="font-size: 1.8rem;">Certifications</h2>
+
+    <div class="cert-grid">
+      
+      <!-- Replace # with actual Credly badge URLs -->
+      <div class="cert-card">
+        <div class="cert-icon">CS</div>
+        <div class="cert-info">
+          <h4 class="cert-title">Cisco Certified Network Associate (CCNA)</h4>
+          <div class="cert-issuer">Cisco</div>
+          <a href="#" target="_blank" class="cert-link">Verify Credential &nearr;</a>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon" style="border-color: var(--text-secondary); color: var(--text-secondary);">S+</div>
+        <div class="cert-info">
+          <h4 class="cert-title">CompTIA Security+</h4>
+          <div class="cert-issuer">CompTIA (In Progress)</div>
+          <span class="cert-link" style="color: var(--text-secondary);">Expected 2026</span>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon" style="border-color: var(--text-secondary); color: var(--text-secondary);">CC</div>
+        <div class="cert-info">
+          <h4 class="cert-title">ISC2 Certified in Cybersecurity</h4>
+          <div class="cert-issuer">ISC2 (In Progress)</div>
+          <span class="cert-link" style="color: var(--text-secondary);">Expected 2026</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Designed & Built by Affan Baig &copy; 2026</p>
+      <p>Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+    // Spotlight Effect for Skills
+    document.querySelectorAll('.skill-category').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  </script>
+</body>
+</html>

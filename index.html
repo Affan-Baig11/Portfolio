@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cybersecurity & Network Security Portfolio of Affan Baig">
+  <title>Affan Baig</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Hero Section Specific Styles */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      min-height: 70vh;
+      position: relative;
+      z-index: 10;
+    }
+    
+    #cyber-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .hero-greeting {
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid var(--accent-color);
+      width: 0;
+      vertical-align: bottom;
+      animation: typing 1.5s steps(24, end) forwards, blink-caret 0.75s step-end infinite;
+      animation-delay: 0.2s;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 26ch }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--accent-color) }
+    }
+    
+    .hero-title {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      position: relative;
+      display: inline-block;
+      cursor: crosshair;
+    }
+
+    .hero-title:hover {
+      text-shadow: 2px 0px var(--accent-color), -2px 0px #ef4444;
+      animation: glitch-shake 0.2s infinite;
+    }
+
+    @keyframes glitch-shake {
+      0% { transform: translate(1px, 1px) }
+      25% { transform: translate(-1px, 0px) }
+      50% { transform: translate(0px, 1px) }
+      75% { transform: translate(1px, -1px) }
+      100% { transform: translate(0px, 0px) }
+    }
+    
+    .hero-subtitle {
+      font-size: 2rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-summary {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-content {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+    
+    .hero-image {
+      flex: 1 1 50%;
+      max-width: 50%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .hero-image img {
+      max-width: 350px;
+      width: 100%;
+      border-radius: 8px;
+      position: relative;
+      z-index: 2;
+      filter: grayscale(20%);
+      transition: var(--transition);
+    }
+    
+    .hero-image img:hover {
+      filter: grayscale(0%);
+    }
+    
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: calc(50% - 155px);
+      width: 350px;
+      height: 100%;
+      border: 2px solid var(--accent-color);
+      border-radius: 8px;
+      z-index: 1;
+      transition: var(--transition);
+    }
+    
+    .hero-image:hover::after {
+      top: 10px;
+      left: calc(50% - 165px);
+    }
+
+    /* Status Banner */
+    .status-banner {
+      background: var(--surface-color);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      background: var(--accent-color);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-color);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(6, 182, 212, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 2rem;
+      }
+      
+      .hero-image::after {
+        left: calc(50% - 165px);
+      }
+      
+      .hero-summary {
+        margin: 0 auto 2rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <canvas id="cyber-canvas"></canvas>
+
+  <header>
+    <div class="container nav-container">
+      <nav>
+        <div class="logo">Affan<span>.</span>Baig</div>
+        <div class="nav-links">
+          <a href="index.html" class="active">/home</a>
+          <a href="about.html">/about</a>
+          <a href="projects.html">/projects</a>
+          <a href="skills.html">/skills</a>
+          <a href="contact.html">/contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-greeting">root@portfolio:~$ whoami</span>
+        <h1 class="hero-title">Affan Baig.</h1>
+        <h2 class="hero-subtitle">Cybersecurity & Network Security</h2>
+        <p class="hero-summary">
+          CS Graduate | CCNA. I engineer resilient security solutions and robust network architectures. 
+          Bridging the gap between software development and deep-packet infrastructure to solve critical communication and security challenges.
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary mb-1">View Projects</a>
+          <a href="Images/Affan Baig CV.docx" download class="btn mb-1" style="margin-left: 1rem;">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="Images/Photo-Me.png" alt="Affan Baig">
+      </div>
+    </section>
+
+    <div class="status-banner mb-4">
+      <div class="status-indicator"></div>
+      <div>
+        <span class="mono-accent">System Status:</span> Active momentum. Currently completing Security+ and ISC2 CC certifications, while preparing for an MSc in Cybersecurity in Germany.
+      </div>
+    </div>
+
+    <section class="highlights mt-4">
+      <h2 class="section-title">Highlights</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3 class="card-title">Siemens</h3>
+          <p class="card-subtitle">Current Role / Internship</p>
+          <p class="card-text">
+            Working within industrial systems environments. Gaining practical experience with enterprise-grade network security and infrastructure requirements.
+          </p>
+          <a href="about.html" class="btn mt-4">Read More &rarr;</a>
+        </div>
+        
+        <div class="card">
+          <h3 class="card-title">RapidRelief</h3>
+          <p class="card-subtitle">Flagship Project</p>
+          <p class="card-text">
+            Offline-first flood emergency & rescue system using an independent LoRa mesh network and high-concurrency FastAPI backend. 92.5% AI accuracy.
+          </p>
+          <a href="projects.html" class="btn mt-4">View Case Study &rarr;</a>
+        </div>
+        
+        <div class="card">
+          <h3 class="card-title">Certifications</h3>
+          <p class="card-subtitle">In Progress</p>
+          <p class="card-text">
+            Validating my network and security foundation through industry-recognized credentials. Expanding my CCNA baseline into specialized cybersecurity domains.
+          </p>
+          <a href="skills.html" class="btn mt-4">View Certs &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Designed & Built by Affan Baig &copy; 2026</p>
+      <p>Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+    // Particle Network Background
+    const canvas = document.getElementById('cyber-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    let width, height;
+    let particles = [];
+    
+    // Track mouse position
+    let mouse = { x: -1000, y: -1000 };
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+    
+    function init() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      
+      particles = [];
+      const particleCount = Math.floor(width / 18); // density
+      
+      for(let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: (Math.random() - 0.5) * 0.8,
+          radius: Math.random() * 1.5 + 0.5
+        });
+      }
+    }
+    
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      
+      // Update and draw particles
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        
+        // Bounce off edges
+        if(p.x < 0 || p.x > width) p.vx *= -1;
+        if(p.y < 0 || p.y > height) p.vy *= -1;
+        
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(6, 182, 212, 0.6)';
+        ctx.fill();
+      });
+      
+      // Draw network connections
+      for(let i = 0; i < particles.length; i++) {
+        // Connect to other particles
+        for(let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          
+          if(dist < 100) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(6, 182, 212, ${0.2 - dist/500})`;
+            ctx.lineWidth = 0.8;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+        
+        // Connect to mouse
+        const dxm = particles[i].x - mouse.x;
+        const dym = particles[i].y - mouse.y;
+        const distm = Math.sqrt(dxm*dxm + dym*dym);
+        
+        if(distm < 150) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(6, 182, 212, ${0.5 - distm/300})`;
+          ctx.lineWidth = 1.2;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(mouse.x, mouse.y);
+          ctx.stroke();
+        }
+      }
+      
+      requestAnimationFrame(draw);
+    }
+    
+    window.addEventListener('resize', init);
+    init();
+    draw();
+  </script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Affan Baig - Cybersecurity & Network Security">
+  <title>Projects | Affan Baig</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .project-featured {
+      background-color: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 3rem;
+      margin-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-featured::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent-color);
+      box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+      opacity: 0.5;
+      animation: scanline 4s linear infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes scanline {
+      0% { top: -10%; opacity: 0; }
+      10% { opacity: 0.5; }
+      90% { opacity: 0.5; }
+      100% { top: 110%; opacity: 0; }
+    }
+    
+    .project-featured::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: var(--accent-color);
+    }
+    
+    .project-header {
+      margin-bottom: 2rem;
+    }
+    
+    .project-role {
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .project-title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .project-type {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+    
+    .project-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    
+    .project-text h4 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .project-text h4:first-child {
+      margin-top: 0;
+    }
+    
+    .project-text p, .project-text ul {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+    
+    .project-text ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    
+    .project-text li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .tech-tag {
+      background-color: var(--bg-color);
+      color: var(--accent-color);
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      border: 1px solid var(--border-color);
+    }
+    
+    .project-media {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .media-item {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      position: relative;
+      cursor: crosshair;
+    }
+    
+    .media-item::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(6, 182, 212, 0.15);
+      mix-blend-mode: color-dodge;
+      opacity: 0;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+    
+    .media-item:hover::after {
+      opacity: 1;
+    }
+
+    .media-item:hover img, .media-item:hover video {
+      filter: contrast(120%) saturate(120%) hue-rotate(-5deg);
+      transform: scale(1.02);
+    }
+    
+    .media-item img, .media-item video {
+      width: 100%;
+      display: block;
+      height: auto;
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+    
+    .media-caption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding: 0.5rem;
+      background: var(--bg-color);
+      font-family: var(--font-mono);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .project-links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .project-content {
+        grid-template-columns: 1fr;
+      }
+      .project-featured {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <nav>
+        <div class="logo">Affan<span>.</span>Baig</div>
+        <div class="nav-links">
+          <a href="index.html">/home</a>
+          <a href="about.html">/about</a>
+          <a href="projects.html" class="active">/projects</a>
+          <a href="skills.html">/skills</a>
+          <a href="contact.html">/contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Projects</h1>
+
+    <div class="project-featured">
+      <div class="project-header">
+        <span class="project-role">Backend Developer</span>
+        <h2 class="project-title">RapidRelief</h2>
+        <span class="project-type">Final Year Project | Offline-First Flood Emergency & Rescue System</span>
+      </div>
+
+      <div class="project-content">
+        <div class="project-text">
+          <h4>The Problem</h4>
+          <p>
+            RapidRelief is an integrated hardware and software disaster-management system built to solve a critical problem: when floods destroy cellular and internet infrastructure, victims have no way to call for help. We engineered an independent solution that works even when standard networks fail.
+          </p>
+
+          <h4>Key Features</h4>
+          <ul>
+            <li>Custom battery-powered IoT hardware nodes (ESP32 + LoRa radio) forming an independent mesh network across disaster zones — no internet or cellular required.</li>
+            <li>Cross-platform mobile app (React Native) allowing victims to connect via Bluetooth and send offline SOS alerts, GPS coordinates, and emergency messages.</li>
+            <li>Signals relay across the LoRa mesh until reaching an internet-connected gateway, then forward instantly to a live admin dashboard.</li>
+            <li>Rescuer/admin web dashboard with real-time interactive mapping of SOS hotspots for resource coordination and dispatch.</li>
+            <li>High-concurrency backend API built to handle simultaneous incoming emergency signals in real time.</li>
+          </ul>
+
+          <h4>My Role & Contribution</h4>
+          <p>
+            As the Backend Developer on a 4-person team, I built the FastAPI backend handling real-time data sync, Firebase integration, and deployment infrastructure.
+          </p>
+
+          <h4>Outcome</h4>
+          <p>
+            Bridges the communication gap during the most critical hours of a disaster, ensuring no call for help goes unheard when standard infrastructure fails. The AI detection component achieved a <strong>92.5% accuracy</strong> in testing.
+          </p>
+
+          <div class="tech-stack">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">LoRa (SX1278)</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQLAlchemy</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TailwindCSS</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://rapid-relief-admin-web.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-media">
+          <div class="media-item">
+            <img src="Images/Flyer.png" alt="RapidRelief Flyer">
+            <div class="media-caption">System Architecture & Overview</div>
+          </div>
+          <div class="media-item">
+            <img src="Images/RescuerDashboard.jpeg" alt="Rescuer Dashboard">
+            <div class="media-caption">Admin / Rescuer Dashboard</div>
+          </div>
+          <div class="media-item">
+            <video controls muted poster="Images/UserDashboard.jpeg">
+              <source src="Images/user app.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="media-caption">User App Demo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title mt-4" style="font-size: 1.8rem;">Other Projects</h2>
+    
+    <div class="card-grid">
+      <div class="card">
+        <h3 class="card-title">Enterprise LAN Architecture</h3>
+        <p class="card-subtitle">Packet Tracer Simulation</p>
+        <p class="card-text">
+          Designed and implemented a complex multi-VLAN campus network using Cisco Packet Tracer. Included OSPF routing, strict ACLs for access control, and redundancy protocols.
+        </p>
+        <div class="tech-stack mt-4">
+          <span class="tech-tag">Cisco PT</span>
+          <span class="tech-tag">OSPF</span>
+          <span class="tech-tag">VLAN</span>
+          <span class="tech-tag">ACL</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Ethical Hacking Simulator</h3>
+        <p class="card-subtitle">Security Research</p>
+        <p class="card-text">
+          Set up isolated virtual environments to simulate and analyze common network vulnerabilities, demonstrating exploit mechanics and verifying mitigation strategies.
+        </p>
+        <div class="tech-stack mt-4">
+          <span class="tech-tag">Kali Linux</span>
+          <span class="tech-tag">Wireshark</span>
+          <span class="tech-tag">Metasploit</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Designed & Built by Affan Baig &copy; 2026</p>
+      <p>Portfolio</p>
+    </div>
+  </footer>
+
+</body>
+</html>

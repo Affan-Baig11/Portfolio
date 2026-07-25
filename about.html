@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Affan Baig - Cybersecurity & Network Security">
+  <title>About | Affan Baig</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 3rem 0;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: var(--border-color);
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      margin-left: -1px;
+    }
+    
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 100%;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: auto;
+      background-color: var(--bg-color);
+      border: 3px solid var(--accent-color);
+      top: 15px;
+      border-radius: 50%;
+      left: 12px;
+      z-index: 1;
+    }
+    
+    .timeline-content {
+      padding: 1.5rem;
+      background-color: var(--surface-color);
+      position: relative;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .timeline-date {
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    
+    .timeline-title {
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .timeline-company {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    
+    .about-text {
+      max-width: 800px;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    
+    .about-text p {
+      margin-bottom: 1rem;
+    }
+
+    /* Cyber Background Styles */
+    .cyber-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      background: var(--bg-color);
+      pointer-events: none;
+    }
+    
+    .cyber-symbol {
+      position: absolute;
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      opacity: 0;
+      font-weight: bold;
+      animation: float 20s infinite linear;
+      white-space: nowrap;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.07; }
+      90% { opacity: 0.07; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+    
+    .cyber-bg::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        linear-gradient(to right, rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated Cyber Background -->
+  <div class="cyber-bg">
+    <div class="cyber-symbol" style="left: 10%; animation-duration: 15s; font-size: 3rem;">{ }</div>
+    <div class="cyber-symbol" style="left: 25%; animation-duration: 25s; font-size: 5rem;">01001</div>
+    <div class="cyber-symbol" style="left: 40%; animation-duration: 18s; font-size: 2rem;">&lt;/&gt;</div>
+    <div class="cyber-symbol" style="left: 60%; animation-duration: 22s; font-size: 4rem;">#</div>
+    <div class="cyber-symbol" style="left: 75%; animation-duration: 19s; font-size: 6rem; animation-delay: -5s;">*</div>
+    <div class="cyber-symbol" style="left: 90%; animation-duration: 28s; font-size: 3rem;">0x9A</div>
+    <div class="cyber-symbol" style="left: 15%; animation-duration: 21s; font-size: 4rem; animation-delay: -10s;">\</div>
+    <div class="cyber-symbol" style="left: 85%; animation-duration: 17s; font-size: 2.5rem; animation-delay: -2s;">[ ]</div>
+    <div class="cyber-symbol" style="left: 50%; animation-duration: 24s; font-size: 10rem; opacity: 0.02; animation-delay: -7s;">&</div>
+    <div class="cyber-symbol" style="left: 30%; animation-duration: 20s; font-size: 3.5rem; animation-delay: -15s;">Sudo</div>
+    <div class="cyber-symbol" style="left: 70%; animation-duration: 26s; font-size: 2.2rem; animation-delay: -8s;">sys.exit()</div>
+  </div>
+
+  <header>
+    <div class="container nav-container">
+      <nav>
+        <div class="logo">Affan<span>.</span>Baig</div>
+        <div class="nav-links">
+          <a href="index.html">/home</a>
+          <a href="about.html" class="active">/about</a>
+          <a href="projects.html">/projects</a>
+          <a href="skills.html">/skills</a>
+          <a href="contact.html">/contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">About Me</h1>
+    
+    <div class="about-text">
+      <p>
+        My journey into cybersecurity started with a Bachelor's in Computer Science. While software engineering taught me how to build systems, I became increasingly fascinated by how to protect, break, and secure them. This pivot led me to dive deep into network security, earning my CCNA, and transitioning my focus fully toward infrastructure and cybersecurity.
+      </p>
+      <p>
+        I have gained practical industry experience through internships spanning aviation, fintech, and industrial sectors. I believe that a strong security posture isn't just about implementing tools, but deeply understanding the underlying networks and systems you are defending.
+      </p>
+      <p>
+        <strong>What's next:</strong> I am actively pursuing my Security+ and ISC2 CC certifications to solidify my foundational cybersecurity knowledge. In the near future, I am headed to Germany to pursue a Master of Science in Cybersecurity to further specialize in this field.
+      </p>
+    </div>
+
+    <h2 class="section-title mt-4" style="font-size: 1.8rem;">Experience</h2>
+    
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Current</span>
+          <h3 class="timeline-title">Intern</h3>
+          <h4 class="timeline-company">Siemens</h4>
+          <p class="text-slate">
+            Gaining exposure to industrial control systems (ICS) and enterprise-level infrastructure. Understanding the unique security and operational requirements of industrial environments.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Past</span>
+          <h3 class="timeline-title">Intern</h3>
+          <h4 class="timeline-company">Paysys Labs</h4>
+          <p class="text-slate">
+            Worked within the fintech sector, gaining insight into secure financial transactions, compliance, and the strict security architecture required for financial software systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Past</span>
+          <h3 class="timeline-title">Intern</h3>
+          <h4 class="timeline-company">PIA (Pakistan International Airlines)</h4>
+          <p class="text-slate">
+            Gained foundational experience in enterprise IT operations and network infrastructure within the aviation sector.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Designed & Built by Affan Baig &copy; 2026</p>
+      <p>Portfolio</p>
+    </div>
+  </footer>
+
+</body>
+</html>
