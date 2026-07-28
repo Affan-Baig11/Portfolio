@@ -154,9 +154,9 @@
     }
     
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(6, 182, 212, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 255, 65, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 255, 65, 0); }
     }
 
     @media (max-width: 900px) {
@@ -211,7 +211,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="Images/Photo-Me.png" alt="Affan Baig">
+        <img src="Images/neon-hacker-img.png" alt="Affan Baig (Cyber Avatar)">
       </div>
     </section>
 
@@ -309,7 +309,7 @@
         
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(6, 182, 212, 0.6)';
+        ctx.fillStyle = 'rgba(0, 255, 65, 0.6)';
         ctx.fill();
       });
       
@@ -323,7 +323,7 @@
           
           if(dist < 100) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(6, 182, 212, ${0.2 - dist/500})`;
+            ctx.strokeStyle = `rgba(0, 255, 65, ${0.2 - dist/500})`;
             ctx.lineWidth = 0.8;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -338,7 +338,7 @@
         
         if(distm < 150) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(6, 182, 212, ${0.5 - distm/300})`;
+          ctx.strokeStyle = `rgba(0, 255, 65, ${0.5 - distm/300})`;
           ctx.lineWidth = 1.2;
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(mouse.x, mouse.y);

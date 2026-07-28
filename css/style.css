@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-color: #0B1120;
-  --surface-color: #1E293B;
-  --surface-hover: #334155;
-  --text-primary: #F8FAFC;
+  --bg-color: #050505;
+  --surface-color: #0A0A0A;
+  --surface-hover: #111111;
+  --text-primary: #E2E8F0;
   --text-secondary: #94A3B8;
-  --accent-color: #06B6D4;
-  --accent-color-hover: #0891B2;
-  --accent-color-glow: rgba(6, 182, 212, 0.2);
-  --border-color: #334155;
+  --accent-color: #00FF41;
+  --accent-color-hover: #00D335;
+  --accent-color-glow: rgba(0, 255, 65, 0.2);
+  --border-color: #1A1A1A;
 
   --font-mono: 'Fira Code', monospace;
   --font-sans: 'Inter', system-ui, sans-serif;
